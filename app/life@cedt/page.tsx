@@ -25,7 +25,7 @@ export default function BlogPage() {
 
       <div className="pb-16">
         <div className="items-center font-black text-5xl my-20">Thoughts from us</div>
-          <div className="flex flex-row">
+          <div className="flex flex-row space-x-10">
           <PrameThought/>
           <NowThought/>
           <ApiThought/>
@@ -33,7 +33,7 @@ export default function BlogPage() {
           </div>
       </div>
 
-    <div className="text-xs font-thin ml-auto text-right">Credit: Video and photos sourced from the Facebook page of Computer Engineering & Digital Technology, Chulalongkorn University.</div>
+    <div className="text-xs font-thin ml-auto">Credit: Video and photos sourced from the Facebook page of Computer Engineering & Digital Technology, Chulalongkorn University.</div>
   </div>
   );
 }

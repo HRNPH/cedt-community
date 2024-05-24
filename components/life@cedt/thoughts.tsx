@@ -9,7 +9,7 @@ import quote from '@/public/life@cedt/quote.png'
 
 export function PrameThought(){
 return (
-    <div className="bg-white border-1 border-[#FACC15] rounded-2xl w-[23%] h-[430px] relative  shadow-lg mx-4">
+    <div className="text-[#384051] bg-white border-2 border-[#FACC15] rounded-2xl w-[23%] h-[420px] relative  shadow-lg transform transition-transform duration-300 hover:scale-105">
     <div className="w-auto h-auto mr-3 ml-7 mt-10">
         <Image src={quote} alt='coursesImg' width={30} height={30} />
     </div>
@@ -25,9 +25,9 @@ return (
     </div>
 
     <div className="flex flex-row">
-        <div className="mt-10 ml-6 text-sm">
-            <div className="font-italic font-thin">Prame,</div>
-            <div className="font-italic font-thin">CEDT student</div>
+        <div className="mt-14 ml-6 text-sm">
+            <div className="italic font-extralight">Prame,</div>
+            <div className="italic font-extralight">CEDT student</div>
         </div>
 
         <div className="w-auto h-auto mt-5 ml-12">
@@ -40,7 +40,7 @@ return (
 
 export function NowThought(){
     return (
-        <div className="bg-white border-1 border-[#FACC15] rounded-2xl w-[23%] h-[430px] relative  shadow-lg mx-4">
+        <div className="text-[#384051] bg-white border-2 border-[#FACC15] rounded-2xl w-[23%] h-[420px] relative  shadow-lg transform transition-transform duration-300 hover:scale-105">
         <div className="w-auto h-auto mr-3 ml-7 mt-10">
             <Image src={quote} alt='coursesImg' width={30} height={30} />
         </div>
@@ -56,9 +56,9 @@ export function NowThought(){
         </div>
     
         <div className="flex flex-row">
-            <div className="mt-10 ml-6 text-sm">
-                <div className="font-italic font-thin">Now,</div>
-                <div className="font-italic font-thin">CEDT student</div>
+            <div className="mt-14 ml-6 text-sm">
+                <div className="italic font-extralight">Now,</div>
+                <div className="italic font-extralight">CEDT student</div>
             </div>
     
             <div className="w-auto h-auto mt-5 ml-12">
@@ -72,7 +72,7 @@ export function NowThought(){
     
 export function ApiThought(){
     return (
-        <div className="bg-white border-1 border-[#FACC15] rounded-2xl w-[23%] h-[430px] relative  shadow-lg mx-4">
+        <div className="text-[#384051] bg-white border-2 border-[#FACC15] rounded-2xl w-[23%] h-[420px] relative  shadow-lg transform transition-transform duration-300 hover:scale-105">
         <div className="w-auto h-auto mr-3 ml-7 mt-10">
             <Image src={quote} alt='coursesImg' width={30} height={30} />
         </div>
@@ -88,9 +88,9 @@ export function ApiThought(){
         </div>
         
         <div className="flex flex-row">
-            <div className="mt-10 ml-6 text-sm">
-                <div className="font-italic font-thin">Api,</div>
-                <div className="font-italic font-thin">CEDT student</div>
+            <div className="mt-14 ml-6 text-sm">
+                <div className="italic font-extralight">Api,</div>
+                <div className="italic font-extralight">CEDT student</div>
             </div>
         
             <div className="w-auto h-auto mt-5 ml-12">
@@ -104,7 +104,7 @@ export function ApiThought(){
         
 export function EstherThought(){
     return (
-        <div className="bg-white border-1 border-[#FACC15] rounded-2xl w-[23%] h-[430px] relative  shadow-lg mx-4">
+        <div className="text-[#384051] bg-white border-2 border-[#FACC15] rounded-2xl w-[23%] h-[420px] relative  shadow-lg transform transition-transform duration-300 hover:scale-105">
         <div className="w-auto h-auto mr-3 ml-7 mt-10">
             <Image src={quote} alt='coursesImg' width={30} height={30} />
         </div>
@@ -120,9 +120,9 @@ export function EstherThought(){
         </div>
         
         <div className="flex flex-row">
-            <div className="mt-10 ml-6 text-sm">
-                <div className="font-italic font-thin">Esther,</div>
-                <div className="font-italic font-thin">CEDT student</div>
+            <div className="mt-14 ml-6 text-sm">
+                <div className="italic font-extralight">Esther,</div>
+                <div className="italic font-extralight">CEDT student</div>
             </div>
         
             <div className="w-auto h-auto mt-5 ml-12">
