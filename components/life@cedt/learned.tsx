@@ -39,7 +39,11 @@ export function CourseCard(props: CourseThought) {
 export default function WhatWeHaveLearned(props: {
   CourseThoughts: CourseThought[];
 }) {
-  return props.CourseThoughts.map((course, index) => (
-    <CourseCard key={index} {...course} />
-  ));
+  return (
+    <>
+      {props.CourseThoughts.map((course, index) => (
+        <CourseCard key={index} {...course} />
+      ))}
+    </>
+  );
 }
