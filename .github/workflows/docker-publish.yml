@@ -99,6 +99,7 @@ jobs:
       #   # against the sigstore community Fulcio instance.
       #   run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
   deploy:
+    needs: build
     environment:
       # use prod for main branch, otherwise use the branch name
       name: ${{ github.ref_name == 'main' && 'prod' || github.ref_name }}
