@@ -14,6 +14,17 @@ on:
     tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ "main", 'testing' ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        description: 'Environment to deploy to'
+        required: true
+        default: 'testing'
+      message:
+        description: 'Message to include in the commit'
+        required: true
+        default: 'Triggered by workflow_dispatch'
 
 env:
   # Use docker.io for Docker Hub if empty
