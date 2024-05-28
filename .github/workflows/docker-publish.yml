@@ -9,22 +9,34 @@ on:
   schedule:
     - cron: '29 23 * * *'
   push:
-    branches: [ "main" ]
+    branches: [ "main" , 'testing' ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", 'testing' ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        description: 'Environment to deploy to'
+        required: true
+        default: 'testing'
+      message:
+        description: 'Message to include in the commit'
+        required: true
+        default: 'Triggered by workflow_dispatch'
 
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
-
+  IMAGE_NAME: ${{ github.repository }}/${{ github.ref_name }} # e.g. ghcr.io/owner/repo/main, ghcr.io/owner/repo/testing
 
 jobs:
   build:
-
+    environment:
+      # use prod for main branch, otherwise use the branch name
+      name: ${{ github.ref_name == 'main' && 'prod' || github.ref_name }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -97,3 +109,20 @@ jobs:
       #   # This step uses the identity token to provision an ephemeral certificate
       #   # against the sigstore community Fulcio instance.
       #   run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
+  deploy:
+    needs: build
+    environment:
+      # use prod for main branch, otherwise use the branch name
+      name: ${{ github.ref_name == 'main' && 'prod' || github.ref_name }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      # This is used to complete the identity challenge
+      # with sigstore/fulcio when running outside of PRs.
+      id-token: write
+    steps:
+      - name: Deployment To Coolify
+        # run linux curl command to deploy to coolify
+        run: |
+          curl --request GET '${{ secrets.COOLIFY_WEBHOOK }}' --header 'Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}'
