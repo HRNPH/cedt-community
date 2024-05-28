@@ -84,7 +84,8 @@ Licensed under the [MIT license](https://github.com/nextui-org/next-app-template
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://api-development.co"><img src="https://avatars.githubusercontent.com/u/48971612?v=4?s=100" width="100px;" alt="Pinsita(Kunsue)"/><br /><sub><b>Pinsita(Kunsue)</b></sub></a><br /><a href="#design-Gunsua" title="Design">🎨</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hrnph"><img src="https://avatars.githubusercontent.com/u/51855316?v=4" width="100px;" alt="myself"/><br /><sub><b>hrnph</b></sub></a><br /><a href="#code-hrnph" title="Code">💻</a> <a href="#maintenance-hrnph" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hrnph"><img src="https://avatars.githubusercontent.com/u/51855316?v=4?s=100" width="100px;" alt="Hirunkul Phimsiri(Guide)"/><br /><sub><b>Hirunkul Phimsiri(Guide)</b></sub></a><br /><a href="#code-hrnph" title="Code">💻</a> <a href="#maintenance-hrnph" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/esthxrs"><img src="https://avatars.githubusercontent.com/u/143799250?v=4?s=100" width="100px;" alt="esthxrs"/><br /><sub><b>esthxrs</b></sub></a><br /><a href="#code-esthxrs" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
