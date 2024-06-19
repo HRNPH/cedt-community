@@ -112,9 +112,10 @@ export const pageWording = {
         title3: "Community",
         },
         footer:{
-            cantlogin: "be a cedt student but can’t login?",
+            cantlogin: "was a cedt student but can’t login?",
             contact: "contact",
-            here: "here"
+            here: "here",
+            href: "https://www.facebook.com/cedt.chula"
         }
 
     }
