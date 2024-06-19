@@ -8,8 +8,10 @@ export default function CantLogin() {
 
       <span className="flex gap-0 justify-center mb-5">
         <div>{pageWording.login.footer.contact}&nbsp;</div>
-        <div className="underline text-[#FA8946] ">
-          {pageWording.login.footer.here}
+        <div className="underline text-primary">
+          <a href={pageWording.login.footer.href} className="text-primary">
+            {pageWording.login.footer.here}
+          </a>
         </div>
       </span>
     </div>

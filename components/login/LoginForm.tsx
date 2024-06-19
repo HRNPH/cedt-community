@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
@@ -53,12 +54,13 @@ export default function DefaultCredentialForm() {
           className="shadow appearance-none border rounded-xl w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
-      <button
+      <Button
+        size="md"
+        className="mt-4 w-full bg-primary text-white font-bold hover:scale-105 transition-all duration-200 ease-in-out"
         type="submit"
-        className="mt-4 w-full bg-gray-300 hover:bg-[#FA8946] text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
       >
         Login
-      </button>
+      </Button>
     </form>
   );
 }
