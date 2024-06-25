@@ -40,7 +40,7 @@ export default function DefaultCredentialForm() {
           name="username"
           type="text"
           required
-          className="shadow appearance-none border rounded-xl w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded-xl w-full py-4 px-3 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
       <div className="mb-4">
@@ -51,7 +51,7 @@ export default function DefaultCredentialForm() {
           name="password"
           type="password"
           required
-          className="shadow appearance-none border rounded-xl w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded-xl w-full py-4 px-3 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
       <Button
