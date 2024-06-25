@@ -11,6 +11,33 @@ export const Logo: React.FC<IconSvgProps> = ({ size = 36, width, height }) => (
   />
 );
 
+export const Profile: React.FC<IconSvgProps> = ({ size = 23, width, height }) => (
+  <Image
+    src="/profile.png"
+    alt="CEDT-Community"
+    width={Number(size || width)}
+    height={Number(size || height)}
+  />
+);
+
+export const Logout: React.FC<IconSvgProps> = ({ size = 16, width, height }) => (
+  <Image
+    src="/logout.png"
+    alt="CEDT-Community"
+    width={Number(size || width)}
+    height={Number(size || height)}
+  />
+);
+
+export const Line: React.FC<IconSvgProps> = ({ size = 200, width, height }) => (
+  <Image
+    src="/line.png"
+    alt="CEDT-Community"
+    width={Number(size || width)}
+    height={Number(size || height)}
+  />
+);
+
 export const DiscordIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,

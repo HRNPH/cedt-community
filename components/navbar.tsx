@@ -1,3 +1,4 @@
+'use client'
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -10,6 +11,8 @@ import {
 import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
+import { useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { Input } from "@nextui-org/input";
 
 import { link as linkStyles } from "@nextui-org/theme";
@@ -21,9 +24,11 @@ import clsx from "clsx";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon } from "@/components/icons";
 
-import { Logo } from "@/components/icons";
+import { Logo, Profile } from "@/components/icons";
+import { LoginButton, ProfileAndLogout} from '@/components/login/loginbuttonandprofile'
 
 export const Navbar = () => {
+
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
       {/* --- Logo --- */}
@@ -64,6 +69,8 @@ export const Navbar = () => {
             <GithubIcon className="text-secondaryCutoff-900 dark:text-secondary" />
           </Link>
           <ThemeSwitch />
+          <LoginButton />
+          <ProfileAndLogout/>
         </NavbarItem>
       </NavbarContent>
 
@@ -72,8 +79,11 @@ export const Navbar = () => {
           <GithubIcon className="text-secondaryCutoff-900 dark:text-secondary" />
         </Link>
         <ThemeSwitch />
+        <LoginButton />
+        <ProfileAndLogout/>
         <NavbarMenuToggle />
       </NavbarContent>
+
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
